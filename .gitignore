@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Binaries compiled with Debug build configuration
+**/Debug
+
+# Work-in-progress projects
+/cpp_task_4/
+/cpp_task_5/
+/cpp_task_7/
