@@ -32,7 +32,8 @@
 *.app
 
 # Binaries compiled with Debug build configuration
-**/Debug
+**/Debug*/
 
 # Work-in-progress projects
-/cpp_task_7/
+/cpp_task_11/
+/HW/HW2/
