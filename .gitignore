@@ -34,5 +34,7 @@
 # Binaries compiled with Debug build configuration
 **/Debug*/
 
+# Only use the root gitignore file
+/**/.gitignore
+
 # Work-in-progress projects
-/cpp_task_5-1

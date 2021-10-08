@@ -189,7 +189,7 @@ int main() {
 	SafeIntInput(l1, 0, str.length(),
 			"Enter the desired value of l1 (the position of the first symbol of the substring)");
 	SafeIntInput(l2, l1, str.length(),
-			"Enter the desired value of l1 (the position of the last symbol of the substring)");
+			"Enter the desired value of l2 (the position of the last symbol of the substring)");
 
 	// I like to think this solution is quite elegant, as it does not utilize neither loops nor the cmath library to calculate the absolute value of (l1-l2)
 	std::cout << "The resulting substring is: "
@@ -221,5 +221,8 @@ int main() {
 	}
 
 	std::cout << "Resulting string is: " << canString;
+
+	//NOTE TODO: There is a strange bug present that causes the output of substring to be null if the l1 and l2 are both equal to the position of the last character,
+	// however, it doesn't happen when l1 and l2 are equal but aren't equal to the position of the last char
 
 }

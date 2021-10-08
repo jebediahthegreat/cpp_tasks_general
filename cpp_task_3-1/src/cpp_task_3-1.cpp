@@ -196,8 +196,8 @@ int main() {
 
 	// fourth
 
-	char* str1 = new char[256]();
-	char* str2 = new char[256]();
+	char *str1 = new char[256]();
+	char *str2 = new char[256]();
 
 	std::cout << "Enter a desired string(1): ";
 	std::cin.ignore(1);
@@ -213,17 +213,17 @@ int main() {
 	std::cout << "Second string is: " << str2 << std::endl;
 
 	int Str1Size = 0;
-	while(str1[Str1Size] != '\0') {
+	while (str1[Str1Size] != '\0') {
 		Str1Size++;
 	}
 	int Str2Size = 0;
-	while(str2[Str2Size] != '\0') {
+	while (str2[Str2Size] != '\0') {
 		Str2Size++;
 	}
 
-	char* str3 = new char[Str1Size + Str2Size + 1];
+	char *str3 = new char[Str1Size + Str2Size + 1];
 
-	for(int count = 0; count < Str1Size + Str2Size + 1; count++) {
+	for (int count = 0; count < Str1Size + Str2Size + 1; count++) {
 		if (count < Str1Size) {
 			str3[count] = str1[count];
 		} else {

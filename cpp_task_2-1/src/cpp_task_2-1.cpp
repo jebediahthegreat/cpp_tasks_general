@@ -52,19 +52,24 @@ int main() {
 
 	switch (x % 4) {
 
-	case 0: y = -1;
-		std::cout << "y(x) = " << y << std::endl;;
+	case 0:
+		y = -1;
+		std::cout << "y(x) = " << y << std::endl;
+		;
 		break;
 
-	case 1: y = 2*x + 1;
+	case 1:
+		y = 2 * x + 1;
 		std::cout << "y(x) = " << y << std::endl;
 		break;
 
-	case 2: y = -x;
+	case 2:
+		y = -x;
 		std::cout << "y(x) = " << y << std::endl;
 		break;
 
-	case 3: y = 3*x;
+	case 3:
+		y = 3 * x;
 		std::cout << "y(x) = " << y << std::endl;
 		break;
 	}
@@ -73,28 +78,29 @@ int main() {
 
 	double x1;
 	std::cout << "Enter a value of x, so that (|x| < 1): ";
-		std::cin >> x1;
+	std::cin >> x1;
 
 	for (signed short int acc = 2; acc < 7; acc++) {
 		std::cout << "Accuracy is 10^-" << acc << ';';
-		long double expression = 1/(pow((1-x1),3));
+		long double expression = 1 / (pow((1 - x1), 3));
 		double accur = static_cast<double>(pow(10, acc));
-		expression = roundf(expression*accur)/accur;
+		expression = roundf(expression * accur) / accur;
 
 		// std::cout << "Debug: " << "expression is: " << std::fixed << std::setprecision(10) << expression;
 
-		long double ex1 = 1 + 3*x1;
+		long double ex1 = 1 + 3 * x1;
 
 		unsigned long int i = 0;
 		long double n = 3;
-		while (static_cast<long double>(roundf(ex1*accur)/accur) != expression) {
-			ex1 += (((n-1)*n)/2)*pow(x1, n-2);
+		while (static_cast<long double>(roundf(ex1 * accur) / accur)
+				!= expression) {
+			ex1 += (((n - 1) * n) / 2) * pow(x1, n - 2);
 			n++;
 			i++;
 			/* std::cout << "Debug: " << "expression is: "
-					<< std::fixed << std::setprecision(10) << expression
-					<< " ex1 is: " << std::fixed << std::setprecision(10)
-			<< (long double)(roundf(ex1*accur)/accur) << std::endl; */
+			 << std::fixed << std::setprecision(10) << expression
+			 << " ex1 is: " << std::fixed << std::setprecision(10)
+			 << (long double)(roundf(ex1*accur)/accur) << std::endl; */
 		}
 		std::cout << " Amount of iterations is: " << i << std::endl;
 	}
